@@ -69,14 +69,14 @@ i {
 .navigation a::after {
     content: "";
     position: absolute;
-    left: 0;
-    bottom: -4px;
-    width: 100%;
-    height: 2px;
+    left: 50%;
+    bottom: -8px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
     background: rgb(113, 255, 186);
-    transform: scaleX(0);
-    transform-origin: right center;
-    transition: transform .35s ease;
+    transform: translateX(-50%) scale(0);
+    transition: transform .3s ease;
 }
 
 .navigation a:hover {
@@ -84,8 +84,7 @@ i {
 }
 
 .navigation a:hover::after {
-    transform: scaleX(1);
-    transform-origin: left center;
+    transform: translateX(-50%) scale(1);
 }
 
 .header {
@@ -150,7 +149,9 @@ h1 {
     transition: background-color .35s ease,
                 color .35s ease,
                 transform .3s ease,
-                box-shadow .3s ease,
+                padding .35s ease,
+                letter-spacing .35s ease,
+                box-shadow .35s ease,
                 border-color .35s ease;
 }
 
@@ -160,36 +161,15 @@ h1 {
     border: none;
 }
 
-.btn::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -120%;
-    width: 60%;
-    height: 100%;
-    background: linear-gradient(120deg,
-                transparent,
-                rgba(255, 255, 255, 0.35),
-                transparent);
-    transform: skewX(-20deg);
-    transition: left .6s ease;
-    z-index: 1;
-    pointer-events: none;
-}
-
-.btn:hover::before {
-    left: 130%;
-}
-
 .btn:hover {
     background-color: #1782CF;
-    box-shadow: 0 0 0 3px rgba(23, 130, 207, .25),
-                0 10px 22px rgba(23, 130, 207, .45);
-    transform: translateY(-2px);
+    letter-spacing: 1.5px;
+    padding: 0 35px;
+    box-shadow: 0 10px 22px rgba(23, 130, 207, .45);
 }
 
 .btn:active {
-    transform: translateY(0) scale(.98);
+    transform: scale(.97);
 }
 
 .btn:focus-visible {
@@ -207,27 +187,27 @@ h1 {
 .btn-outline::before {
     content: "";
     position: absolute;
-    inset: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 0;
     background: #1782CF;
-    transform: scaleX(0);
-    transform-origin: left center;
-    transition: transform .4s ease;
+    transition: height .4s ease;
     z-index: -1;
 }
 
 .btn-outline:hover {
     color: #fff;
     border-color: #1782CF;
-    transform: translateY(-2px);
     box-shadow: 0 10px 22px rgba(23, 130, 207, .4);
 }
 
 .btn-outline:hover::before {
-    transform: scaleX(1);
+    height: 100%;
 }
 
 .btn-outline:active {
-    transform: translateY(0) scale(.98);
+    transform: translateY(1px);
 }
 
 .btn-outline:focus-visible {
@@ -266,11 +246,12 @@ h1 {
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     transition: transform .5s ease, box-shadow .5s ease;
+    transform-origin: center;
 }
 
 .portfolio-item:hover img {
-    transform: translateY(-8px) scale(1.015);
-    box-shadow: 0 20px 45px rgba(0, 0, 0, .2);
+    transform: rotate(-1.2deg) scale(1.02);
+    box-shadow: 0 25px 40px rgba(0, 0, 0, .25);
 }
 
 .portfolio-item p {
@@ -279,6 +260,12 @@ h1 {
     font-weight: 500;
     color: #333;
     text-decoration: underline;
+    transition: color .35s ease, text-decoration-color .35s ease;
+}
+
+.portfolio-item:hover p {
+    color: #1782CF;
+    text-decoration-color: transparent;
 }
 
 .contacts {
@@ -320,46 +307,26 @@ h1 {
     min-width: 250px;
     max-width: 100%;
     position: relative;
-    overflow: hidden;
-    transition: border-color .35s ease,
+    transition: background-color .3s ease,
+                border-color .3s ease,
                 transform .3s ease,
-                box-shadow .35s ease;
-}
-
-.contact-btn::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0;
-    height: 0;
-    border-radius: 50%;
-    background: radial-gradient(circle,
-                rgba(23, 130, 207, .35),
-                transparent 70%);
-    transform: translate(-50%, -50%);
-    transition: width .55s ease, height .55s ease;
-    pointer-events: none;
-}
-
-.contact-btn:hover::before {
-    width: 420px;
-    height: 420px;
+                box-shadow .3s ease;
 }
 
 .contact-btn:hover {
-    transform: translateY(-4px);
+    background: #1782CF;
     border-color: #1782CF;
-    box-shadow: 0 12px 26px rgba(23, 130, 207, .35);
+    transform: translateX(12px) rotate(-1.5deg);
+    box-shadow: -8px 12px 26px rgba(23, 130, 207, .4);
 }
 
 .contact-btn i {
     font-size: 24px;
-    transition: transform .35s ease;
+    transition: transform .4s ease;
 }
 
 .contact-btn:hover i {
-    transform: scale(1.15) rotate(-6deg);
+    transform: rotate(360deg) scale(1.2);
 }
 
 .icon-telegram {
@@ -495,6 +462,10 @@ h1 {
         width: 100%;
         height: auto;
         padding: 14px 18px;
+    }
+
+    .btn:hover {
+        padding: 14px 22px;
     }
 
     .contact-btn {
