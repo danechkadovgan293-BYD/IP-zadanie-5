@@ -31,7 +31,7 @@
                      class="header-img animate__animated animate__fadeInLeft">
                 <div class="header-desc">
                     <h1 class="animate__animated animate__fadeInRight animate__delay-1s">
-                        Данил<br>Довгань
+                        Довгань Данил
                     </h1>
                     <p class="header-text animate__animated animate__fadeInRight animate__delay-2s">
                         фрилансер, веб-разработчик,<br> создание сайтов
@@ -41,59 +41,71 @@
                         <button class="btn-outline">Контакты</button>
                     </div>
                 </div>
+                <div class="timer-wrapper">
+                    <span>До конца дня:</span>
+                    <samp style="font-size: 48px;" id="timer">00:00:00</samp>
+                </div>
             </div>
         </div>
     </header>
 
     <main>
-        <section id="Portfolio" class="portfolio">
+        <section id="Portfolio" class="works">
             <div class="container">
-                <h2 class="section-title animate__animated animate__fadeInUp">Портфолио</h2>
-                <div class="portfolio-list">
-                    <div class="portfolio-item animate__animated animate__fadeInUp">
+                <h2 class="works-heading animate__animated animate__fadeInUp">
+                    Портфолио
+                </h2>
+                <div class="works-wrapper">
+                    <div class="work-item animate__animated animate__fadeInUp">
                         <img src="img/project-01.jpg" srcset="img/project-01@2x.jpg"
-                             alt="Сайт магазина мебели">
-                        <p>Сайт магазина мебели</p>
+                             alt="Интерьер мебели" class="work-image">
+                        <span class="work-label">Сайт магазина мебели</span>
                     </div>
-                    <div class="portfolio-item animate__animated animate__fadeInUp animate__delay-1s">
+                    <div class="work-item animate__animated animate__fadeInUp animate__delay-1s">
                         <img src="img/project-02.jpg" srcset="img/project-02@2x.jpg"
-                             alt="Сайт туристического агентства">
-                        <p>Сайт туристического агентства</p>
+                             alt="Туристическое агентство" class="work-image">
+                        <span class="work-label">Сайт туристического агентства</span>
                     </div>
-                    <div class="portfolio-item animate__animated animate__fadeInUp animate__delay-2s">
+                    <div class="work-item animate__animated animate__fadeInUp animate__delay-2s">
                         <img src="img/project-03.jpg" srcset="img/project-03@2x.jpg"
-                             alt="Сайт жилого комплекса">
-                        <p>Сайт жилого комплекса</p>
+                             alt="Жилой комплекс" class="work-image">
+                        <span class="work-label">Сайт жилого комплекса</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="Contact" class="contacts">
+        <section id="Contact" class="socials">
             <div class="container">
-                <h2 class="section-title animate__animated animate__fadeInUp">Контакты</h2>
-                <div class="contacts-btns">
-                    <a href="#" class="contact-btn animate__animated animate__fadeInUp animate__delay-1s">
-                        <i class="fa-brands fa-telegram icon-telegram"></i>
-                        Написать в Telegram
+                <h2 class="socials-heading animate__animated animate__fadeInUp">
+                    Контакты
+                </h2>
+                <div class="socials-row">
+                    <a href="#" class="social-btn animate__animated animate__fadeInUp animate__delay-1s">
+                        <i class="fa-brands fa-telegram socials-icon telegram-color"></i>
+                        <span>Написать в Telegram</span>
                     </a>
-                    <a href="#" class="contact-btn animate__animated animate__fadeInUp animate__delay-2s">
-                        <i class="fa-solid fa-comment-dots icon-max"></i>
-                        Отправить в Max
+                    <a href="#" class="social-btn animate__animated animate__fadeInUp animate__delay-2s">
+                        <i class="fa-solid fa-comment-dots socials-icon max-color"></i>
+                        <span>Отправить в Max</span>
                     </a>
-                    <a href="#" class="contact-btn animate__animated animate__fadeInUp animate__delay-3s">
-                        <i class="fa-brands fa-vk icon-vk"></i>
-                        Связаться Вконтакте
+                    <a href="#" class="social-btn animate__animated animate__fadeInUp animate__delay-3s">
+                        <i class="fa-brands fa-vk socials-icon vk-color"></i>
+                        <span>Связаться Вконтакте</span>
                     </a>
                 </div>
-                <div class="footer-info animate__animated animate__fadeIn animate__delay-3s">
-                    <p>© ДАНИЛ ДОВГАНЬ</p>
+
+                <div class="socials-footer animate__animated animate__fadeIn animate__delay-3s">
+                    <p>© ДОВГАНЬ ДАНИЛ</p>
                     <p>HTML верстка, создание сайтов</p>
                     <p>ДОНЕЦК</p>
-                    <p><i class="fa-solid fa-laptop-code"></i> Макет сверстан нативно</p>
+                    <p class="footer-note">
+                        <i class="fa-solid fa-laptop-code"></i> Макет сверстан нативно
+                    </p>
                 </div>
             </div>
         </section>
     </main>
+    <script src="js/script.js"></script>
 </body>
 </html>
